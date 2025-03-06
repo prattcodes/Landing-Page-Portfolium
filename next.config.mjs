@@ -17,10 +17,12 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export', // Export as static HTML
+  generateBuildId: () => 'build',
+  distDir: 'out',
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
+    webpackBuildWorker: false,
+    parallelServerBuildTraces: false,
+    parallelServerCompiles: false,
   },
   webpack: (config, { isServer }) => {
     // Optimize bundle size
