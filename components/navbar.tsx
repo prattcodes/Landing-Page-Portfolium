@@ -37,8 +37,17 @@ export function Navbar() {
 }
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <Link href={href} className="text-sm font-medium text-silver/80 hover:text-silver-bright transition-colors">
+    <Link href={href} onClick={handleClick} className="text-sm font-medium text-silver/80 hover:text-silver-bright transition-colors">
       {children}
     </Link>
   )
