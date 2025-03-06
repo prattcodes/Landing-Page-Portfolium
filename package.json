@@ -1,12 +1,13 @@
 {
-  "name": "my-v0-project",
+  "name": "quickfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "wrangler pages deploy out --project-name=landing-page-quickfolio"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

@@ -16,10 +16,23 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export', // Export as static HTML
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+  },
+  webpack: (config, { isServer }) => {
+    // Optimize bundle size
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      maxInitialRequests: 25,
+      maxAsyncRequests: 25,
+      minSize: 20000,
+      maxSize: 20 * 1024 * 1024, // 20 MiB max file size for Cloudflare Pages
+    };
+
+    return config;
   },
 }
 
