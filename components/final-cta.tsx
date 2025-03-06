@@ -11,10 +11,10 @@ export function FinalCta() {
           Join a community of developers who've landed their dream jobs with Quickfolio
         </h2>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button
+         <Button
             containerClassName="w-auto h-auto"
-            borderClassName="bg-[radial-gradient(#000000_40%,transparent_60%)]"
-            className="border-black/20 bg-silver-bright/80 text-black hover:text-black rounded-2xl px-6 py-3"
+            borderClassName="bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]"
+            className="border-silver-bright/20 bg-black/80 text-silver-bright hover:text-white rounded-2xl px-6 py-3"
           >
             <span className="flex items-center gap-2 text-base">
               Sign Up Free

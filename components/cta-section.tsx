@@ -24,7 +24,7 @@ export function CtaSection() {
           <Button
             containerClassName="w-auto h-auto"
             borderClassName="bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]"
-            className="border-silver-bright/20 bg-black/80 text-silver-bright hover:text-white rounded-2xl px-6 py-3"
+            className="border-black/20 bg-silver-bright/80 text-black hover:text-black rounded-2xl px-6 py-3"
           >
             <span className="text-base">See Example Portfolios</span>
           </Button>

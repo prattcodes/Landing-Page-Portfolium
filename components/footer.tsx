@@ -1,7 +1,9 @@
 import { Code, Github, Layers } from "lucide-react"
 import Link from "next/link"
-
+import { FlipWords } from "./ui/flip-words"
+const flipword = ["days", "minutes"]
 export function Footer() {
+
   return (
     <footer className="border-t border-silver-bright/10 bg-black text-silver-bright">
       <div className="container py-12">
@@ -11,7 +13,7 @@ export function Footer() {
               <Layers className="h-6 w-6 text-silver-bright" />
               <span className="text-xl font-bold glow-text">Quickfolio</span>
             </div>
-            <p className="text-sm text-silver/80">Your  portfolio in minutes, not days.</p>
+            <p className="text-sm text-silver/80">Your  portfolio in <FlipWords words={flipword} className="inline text-silver/80 -ml-2" /></p>
           </div>
           <div>
             <h3 className="font-medium mb-4">Product</h3>

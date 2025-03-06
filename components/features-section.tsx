@@ -1,7 +1,7 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import { FileText, Link, MessageSquare, Rocket, Zap } from "lucide-react"
-import { EvervaultCard } from "@/components/evervault-card"
 import { LucideIcon } from "lucide-react"
 
 // Define the feature card type
@@ -57,18 +57,54 @@ export function FeaturesSection() {
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
-          <EvervaultCard
+          <Feature
             key={index}
             icon={<feature.icon className="h-8 w-8" />}
-            text={feature.text}
+            title={feature.text}
             description={feature.description}
-            className="h-[350px] rounded-2xl"
+            index={index}
           />
         ))}
       </div>
     </section>
+  )
+}
+
+const Feature = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string
+  description: string
+  icon: React.ReactNode
+  index: number
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col py-10 relative group/feature",
+        "border border-silver-bright/10 rounded-2xl",
+        "hover:border-silver-bright/30 transition-colors duration-200"
+      )}
+    >
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-silver-bright/5 to-transparent pointer-events-none rounded-2xl" />
+      <div className="mb-4 relative z-10 px-10 text-silver-bright/80">
+        {icon}
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-silver-bright/20 group-hover/feature:bg-silver-bright/40 transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-silver-bright">
+          {title}
+        </span>
+      </div>
+      <p className="text-sm text-silver/80 max-w-xs relative z-10 px-10">
+        {description}
+      </p>
+    </div>
   )
 }
 
