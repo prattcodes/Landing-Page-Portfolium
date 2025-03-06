@@ -70,7 +70,7 @@ export function BackgroundPaths({
           transition={{ duration: 2 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-8 mt-10 tracking-tighter">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-8 mt-16 md:mt-32 tracking-tighter">
             {words.map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block mr-4 last:mr-0">
                 {word.split("").map((letter, letterIndex) => (
