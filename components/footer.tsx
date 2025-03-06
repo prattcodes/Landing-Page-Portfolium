@@ -9,7 +9,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Layers className="h-6 w-6 text-silver-bright" />
-              <span className="text-xl font-bold glow-text">Portfolium</span>
+              <span className="text-xl font-bold glow-text">Quickfolio</span>
             </div>
             <p className="text-sm text-silver/80">Your  portfolio in minutes, not days.</p>
           </div>
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-silver-bright/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-silver/80">© {new Date().getFullYear()} Portfolium. All rights reserved.</p>
+          <p className="text-sm text-silver/80">© {new Date().getFullYear()} Quickfolio. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#" className="text-silver/80 hover:text-silver-bright transition-colors">
               <Github className="h-5 w-5" />

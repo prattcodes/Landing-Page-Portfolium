@@ -6,10 +6,10 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolium - Your Portfolio in Minutes",
+  title: "Quickfolio - Your Portfolio in Minutes",
   description:
     "Showcase your skills, projects, and experience with a clean, minimalist portfolio that makes you stand out to employers and clients.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

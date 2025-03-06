@@ -1,4 +1,4 @@
-name = "landing-page-portfolium"
+name = "landing-page-Quickfolio"
 compatibility_date = "2024-01-01"
 
 [build]
@@ -13,5 +13,5 @@ BUILD_OUTPUT_DIRECTORY = ".next"
 
 [env.production]
 routes = [
-  { pattern = "/.*", zone_name = "landing-page-portfolium" }
+  { pattern = "/.*", zone_name = "landing-page-Quickfolio" }
 ]

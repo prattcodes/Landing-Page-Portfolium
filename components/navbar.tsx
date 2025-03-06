@@ -12,7 +12,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Layers className="h-6 w-6 text-silver-bright" />
-          <span className="text-xl font-bold text-silver-bright glow-text">Portfolium</span>
+          <span className="text-xl font-bold text-silver-bright glow-text">Quickfolio</span>
         </div>
         <nav className="hidden md:flex gap-6">
           <NavLink href="#features">Features</NavLink>

@@ -8,7 +8,7 @@ export function FinalCta() {
     <section className="bg-silver-bright text-black">
       <div className="container py-20 text-center">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-          Join a community of developers who've landed their dream jobs with Portfolium
+          Join a community of developers who've landed their dream jobs with Quickfolio
         </h2>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Button
